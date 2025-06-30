@@ -1,0 +1,266 @@
+/* Index.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #0f172a, #6b21a8, #0f172a);
+  position: relative;
+}
+
+/* Background blobs animation */
+.background-animation {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blobs-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+}
+
+.blob {
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 9999px;
+  mix-blend-mode: multiply;
+  filter: blur(64px);
+  animation: pulse 6s infinite ease-in-out;
+}
+
+.blob.purple {
+  top: 0;
+  left: -1rem;
+  background-color: #8b5cf6;
+}
+
+.blob.pink {
+  top: 0;
+  right: -1rem;
+  background-color: #ec4899;
+  animation-delay: 2s;
+}
+
+.blob.blue {
+  bottom: -2rem;
+  left: 5rem;
+  background-color: #3b82f6;
+  animation-delay: 4s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Header */
+.header {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-gradient {
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(to right, #8b5cf6, #ec4899);
+}
+
+.icon-white {
+  color: white;
+  width: 2rem;
+  height: 2rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.subtitle {
+  color: #c4b5fd;
+  margin: 0;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.icon-small {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.icon-pink {
+  color: #ec4899;
+}
+
+/* Main */
+.main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Image Generator Section */
+.generator-section {
+  margin-bottom: 3rem;
+}
+
+.generator-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+}
+
+.generator-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon-yellow {
+  color: #facc15;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.section-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Gallery Section */
+.gallery-section {
+  margin-bottom: 2rem;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.icon-purple {
+  color: #a855f7;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.favorite-count {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.favorite-badge {
+  background-color: rgba(236, 72, 153, 0.2);
+  color: #f9a8d4;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+/* Empty Gallery */
+.empty-gallery {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.empty-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.empty-icon {
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(to right, #8b5cf6, #ec4899);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.icon-large {
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.empty-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.empty-description {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.5rem;
+}
+
+.inspiration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #c4b5fd;
+  font-size: 0.875rem;
+}
