@@ -70,6 +70,7 @@
 
 .toggle-advanced {
   margin-bottom: 1rem;
+  background: linear-gradient(to right, #9333ea, #ec4899);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
